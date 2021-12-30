@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="kr.co.item">
+
+	<insert id="insertItem">
+		INSERT INTO tbl_item (itemid, itemname, itemprice, itemcount, userid)
+		VALUES
+		(#{itemid}, #{itemname}, #{itemprice}, #{itemcount}, #{userid})
+	</insert>
+	
+	<update id="update">
+		UPDATE tbl_item SET itemprice = #{itemprice}, itemcount = #{itemcount}, userid = #{userid}
+		WHERE itemid = #{itemid} AND itemname = #{itemname} 
+	</update>
+
+
+
+</mapper>
